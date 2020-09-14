@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: client-deployment
+    namespace: microservicego
+spec:
+    selector:
+        matchLabels:
+            labels:
+                App: GO
+    replicas: 3
+    template:
+        metadata:
+            labels:
+                App: GO
+        spec:
+            containers:
+            - name: client
+              image: babibe2211/service-client:latest
+              ports:
+                -containerPort: 8081

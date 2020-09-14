@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+    name: client-service 
+    namespace: microservicego
+spec:
+    selector:
+        App: GO
+  ports:
+  - port: 8081
+    targetPort: 8081
+    protocol: TCP

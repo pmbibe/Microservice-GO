@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+    name: server 
+    namespace: microservicego
+spec:
+    selector:
+        App: GO
+  ports:
+  - port: 4040
+    targetPort: 4040
+    protocol: TCP

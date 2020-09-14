@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: server-deployment
+    namespace: microservicego
+spec:
+    selector:
+        matchLabels:
+            labels:
+                App: GO
+    replicas: 3
+    template:
+        metadata:
+            labels:
+                App: GO
+        spec:
+            containers:
+            - name: server
+              image: babibe2211/service-server:latest
+              ports:
+                -containerPort: 4040
