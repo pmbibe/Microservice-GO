@@ -1,5 +1,4 @@
 # Microservice-GO
 # Microservice with Nginx Ingress + MetaLB  
 #  Microservice with Traefik
-- Annotations Traefik
-  - 1
+  You can find some detail at https://docs.traefik.io/v1.7/configuration/backends/kubernetes/
